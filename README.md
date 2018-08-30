@@ -37,6 +37,8 @@ This Github comes with 4 python files that needed to be imported by other codes:
 
 As a good first test to make sure everything runs properly: open the python file named "----_Test_Code".  If the file runs properly, a messege should print saying that all of the functions imported correctly.
 
+If you also have Juypter Notebook installed from Anaconda Distribution listed above, there is a tutorial file named "-----.jptyr" which I reccomend starting with.  It covers the basics of the most important functions used throughout the code, explaining exactly how the quantum systems are represented into classical numpy matrices.
+
 
 ## Classical Simulation of Quantum Systems
 
