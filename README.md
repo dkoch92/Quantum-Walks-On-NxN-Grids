@@ -37,6 +37,7 @@ This Github comes with 4 python files that needed to be imported by other codes:
 
 As a good first test to make sure everything runs properly: open the python file named "----_Test_Code".  If the file runs properly, a messege should print saying that all of the functions imported correctly.
 
+
 ## Classical Simulation of Quantum Systems
 
 When designing new quantum algorithms, often times it is useful to run simulations of the behavior of quantum systems on a clssical computer.  This is precisely what all of these codes do: simulate the results one could expect from running a Quantum Random Walk on NxN Grid graphs.  The advantage of simulating these walks classically is the ability to store information about the state of the system at any given moment.  This allows us to highlight the unique features of these quantum systems, with exact values for state amplitudes, probabilities, etc.  Such a task is in principle impossible with real quantum systems, which is why studying them through classical codes is so insightful.  By studying the "under the hood" properties of these quantum systems, we can better determine whether they have the potential for speedups over classical algorithms. 
