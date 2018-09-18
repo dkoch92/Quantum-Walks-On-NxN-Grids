@@ -1,7 +1,7 @@
 # Quantum-Walks-On-NxN-Grids
 Code used for the publication: "Scattering Quantum Random Walks on Square Grids and Randomly Generated Mazes" 
 
-arXiv pre-print version: 
+arXiv pre-print version:  ~ coming soon ~
 
 The code assmebled in this project was used to generate all of the results presented in the paper mentioned above.  They are python codes that simulate quantum systems, which in principle can be used as algorithms on a quantum computer.  The advantage to studying quantum systems in this way is a more tactile way of 'seeing' under the hood, rather than relying on solely analytical results. 
 
