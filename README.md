@@ -15,29 +15,20 @@ The code requires Python 3.5 or higher
 
 Once you have Spyder, or another Python IDE up and running, download all of the python files and put them together in a location somwhere on your computer. For example, store them in a folder on your desktop labeled "Quantum Walks."  It is important that all of the python files be stored in the same location, as they call upon each other frequently to import functions.
 
-For example, many of the codes will call upon the file '-------.py' for functions:
+For example, many of the codes will call upon the file 'NxN_functions.py' for functions:
 
 ```
-import -------- as nt
+import NxN_functions as nn
 ```
-This Github comes with 4 python files that needed to be imported by other codes:
+In addition, one other python file needs to be imported for other codes:
 
 ```
-1s.py 
-```
-```
-2.py 
-```
-```
-3.py 
-```
-```
-4.py 
+import Maze_Generator.py as mg
 ```
 
-As a good first test to make sure everything runs properly: open the python file named "----_Test_Code".  If the file runs properly, a messege should print saying that all of the functions imported correctly.
+As a good first test to make sure everything runs properly: open the python file named "First_Run.py".  If the file runs properly, a messege should print saying that all of the functions imported correctly.
 
-If you also have Juypter Notebook installed from Anaconda Distribution listed above, there is a tutorial file named "-----.jptyr" which I reccomend starting with.  It covers the basics of the most important functions used throughout the code, explaining exactly how the quantum systems are represented into classical numpy matrices.
+If you also have Juypter Notebook installed from Anaconda Distribution listed above, there is a tutorial file named "-----.jptyr" (to come soon) which I reccomend starting with.  It covers the basics of the most important functions used throughout the code, explaining exactly how the quantum systems are represented into classical numpy matrices.
 
 
 ## Classical Simulation of Quantum Systems
