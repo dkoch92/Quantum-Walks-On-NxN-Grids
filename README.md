@@ -3,7 +3,7 @@ Code used for the publication: "Scattering Quantum Random Walks on Square Grids 
 
 arXiv pre-print version:  ~ coming soon ~
 
-The code assmebled in this project was used to generate all of the results presented in the paper mentioned above.  They are python codes that simulate quantum systems, which in principle can be used as algorithms on a quantum computer.  The advantage to studying quantum systems in this way is a more tactile way of 'seeing' under the hood, rather than relying on solely analytical results. 
+The code assmebled in this project was used to generate all of the results presented in the paper mentioned above.  They are a collection python codes that simulate quantum systems, which in principle can be used as algorithms on a quantum computer. 
 
 ## Getting Started
 
@@ -13,30 +13,22 @@ link: https://www.anaconda.com/download
 
 The code requires Python 3.5 or higher
 
-Once you have Spyder, or another Python IDE up and running, download all of the python files and put them together in a location somwhere on your computer. For example, store them in a folder on your desktop labeled "Quantum Walks."  It is important that all of the python files be stored in the same location, as they call upon each other frequently to import functions.
-
-For example, many of the codes will call upon the file 'NxN_functions.py' for functions:
-
+Once you have Spyder, or another Python IDE up and running, download all of the python files and put them together in a location somwhere on your computer. For example, store them in a folder on your desktop labeled "Quantum Walks."  It is important that all of the python files be stored in the same location, as they call upon each other frequently to import functions:
 ```
 import NxN_functions as nn
 ```
-In addition, one other python file needs to be imported for other codes:
-
 ```
 import Maze_Generator.py as mg
 ```
 
 As a good first test to make sure everything runs properly: open the python file named "First_Run.py".  If the file runs properly, a messege should print saying that all of the functions imported correctly.
 
-If you also have Juypter Notebook installed from Anaconda Distribution listed above, there is a tutorial file named "-----.jptyr" (to come soon) which I reccomend starting with.  It covers the basics of the most important functions used throughout the code, explaining exactly how the quantum systems are represented into classical numpy matrices.
-
-
 ## Classical Simulation of Quantum Systems
 
 When designing new quantum algorithms, often times it is useful to run simulations of the behavior of quantum systems on a clssical computer.  This is precisely what all of these codes do: simulate the results one could expect from running a Quantum Random Walk on NxN Grid graphs.  The advantage of simulating these walks classically is the ability to store information about the state of the system at any given moment.  This allows us to highlight the unique features of these quantum systems, with exact values for state amplitudes, probabilities, etc.  Such a task is in principle impossible with real quantum systems, which is why studying them through classical codes is so insightful.  By studying the "under the hood" properties of these quantum systems, we can better determine whether they have the potential for speedups over classical algorithms. 
 
 ## Running The Codes
-All of the codes provided in this project run "out of the box" and showcase certain properties of these NxN quantum systems.  Most of the codes produce a plot or print results to the terminal (or both).  For further explination on the results produced by individual codes, a short paragraph is provided at the beginning of each code as well as documentation on each function.  For more information about the overall goal of these codes, I reccomended reading the arXiv paper listed above.
+All of the codes provided in this project run "out of the box" and showcase certain properties of these NxN quantum systems.  Most of the codes produce a plot or print results to the terminal (or both).  For further explination on the results produced by individual codes, a short paragraph is provided at the beginning of each code as well as documentation on each module.  For more information about the overall goal of these codes, I reccomended reading the arXiv paper listed above.
 
 ## Coding Style Disclaimer
 
