@@ -18,7 +18,7 @@ Once you have Spyder, or another Python IDE up and running, download all of the 
 import NxN_functions as nn
 ```
 ```
-import Maze_Generator.py as mg
+import Maze_Generator as mg
 ```
 
 As a good first test to make sure everything runs properly: open the python file named "First_Run.py".  If the file runs properly, a messege should print saying that all of the functions imported correctly.
