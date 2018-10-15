@@ -66,13 +66,13 @@ Qc = nn.Q_Connections()
 #------------------------------------------------------------------------------
 #  Module 1:    Module 1: Fastest Hybrid Speeds for Each Radius 
 #------------------------------------------------------------------------------
-'''   # triple ' here
+'''  # triple ' here
 #   User Input:   grid size N  | F location | unitary steps S  | max radius rmax
 
-N = 24
-F = [10,10]
-S = 50
-rmax = 9
+N = 30
+F = [12,12]
+S = 70
+rmax = 6
 
 #   Running this code will find the fastest optimal hybrid speeds for each searching radius up to rmax
 #   Results are printed to console  ( < 1 min )
@@ -107,9 +107,9 @@ print('Optimal Radius: ',int(best_r[0]),'  Speed: ',best_r[1],'  Unitary Steps: 
 #  Module 2:    Plotting Hybrid Speeds vs Unitary Steps
 #------------------------------------------------------------------------------
 '''   # triple ' here
-N = 40
-F = [10,10]
-S = 150
+N = 30
+F = [12,12]
+S = 100
 rmax = 10
 
 #   Running this code will gather the stable hybrid speeds for each unitary step
@@ -147,7 +147,7 @@ plt.xlabel('unitary steps')
 plt.ylabel('speed')
 
 
-'''    # triple ' here
+'''   # triple ' here
 
 
 #------------------------------------------------------------------------------
@@ -156,8 +156,8 @@ plt.ylabel('speed')
 '''    # triple ' here
 #   User Input:   grid size N  | F location | unitary steps S
 
-N = 24
-F = [10,10]
+N = 30
+F = [12,12]
 S = 60
 
 #   Running this code will find the fastest optimal hybrid speeds for each searching radius
@@ -188,7 +188,7 @@ plt.scatter(best_r[0],best_r[1],s=110,color='purple',marker='*')
 plt.xlabel('searching radius')
 plt.ylabel('speed')
 
-'''    # triple ' here
+'''   # triple ' here
 
 #------------------------------------------------------------------------------
 #  Module 4:    Plotting Radial Probability for Fastest Speed 
@@ -196,11 +196,11 @@ plt.ylabel('speed')
 '''   # triple ' here
 #   User Input:   grid size N  | F location 
 
-N = 24
-F = [10,10]
+N = 30
+F = [12,12]
 
 #   Running this code will first find the fastest optimal hybrid speed
-#   Then the code calculates the probability accumulated radiialy around F
+#   Then the code calculates the probability accumulated radialy around F
 #   A plot is generated  ( < 1 min )
 
 
@@ -228,14 +228,14 @@ plt.xticks(Labels)
 
 
 #------------------------------------------------------------------------------
-#  Module 4:     Confirming the Optimal Radius Hybrid Speed Probabilistically
+#  Module 5:     Confirming the Optimal Radius Hybrid Speed Probabilistically
 #------------------------------------------------------------------------------
 '''    # triple ' here
 #   User Input:   grid size N  | F location  |  sample trials T
 
-N = 24
-F = [10,10]
-T = 2*10**4
+N = 30
+F = [12,12]
+T = 4*10**4
 
 #   Running this code will first find the fastest stable hybrid speed
 #   Then, using randomly generated measurements, calculates the average hybrid speed  ( 1-2 min )

@@ -1,9 +1,7 @@
 import NxN_functions as nn
+import Maze_Generator as mg
 import numpy as np
 
-
-def add(x,y):
-    return x+y
 
 # ----------- # ----------- #----------- #----------- #----------- #----------- #----------- #
 '''
@@ -27,17 +25,35 @@ List_of_nn_functions = ['Initialize','Grid','Q_Edges','Q_Connections','Q_Incomin
                         'Max_Radius','Prob_Dist','Stable_Hybrd','Avg_Steps_R','Radial_Info',
                         'Hybrid_Speed','VecMin','Best_Hybrid_Spds','Simulate_Measurement']
 
-all_bool = True
+List_of_mg_functions = ['Initialize_Maze','Check_Moves','Pick_Move','Location_Value','Determine_Direction',
+                        'Determine_Next_Location','First_Move','Move','Clean_Maze','Clean_Path',
+                        'Generate_Maze','Maze','Walls_Dmax','Q_Walls','Create_Walls_List','Remove_Walls']
+
+#----------------------------------------------------------------------
+
+nn_all_bool = True
 for s in np.arange(len(List_of_nn_functions)):
     func = 'nn.'+List_of_nn_functions[s]
     if( eval( func ) ):
         print('imported -- '+func)
     else:
-        all_bool = False
+        nn_all_bool = False
         
-if(all_bool):
+if(nn_all_bool):
     print('     ------------      ')
-    print('All functions imported properly')
+    print('All NxN_functions imported properly')
+    print('  ')
     
+#----------------------------------------------------------------------
 
-
+mg_all_bool = True
+for s in np.arange(len(List_of_mg_functions)):
+    func = 'mg.'+List_of_mg_functions[s]
+    if( eval( func ) ):
+        print('imported -- '+func)
+    else:
+        mg_all_bool = False
+        
+if(mg_all_bool):
+    print('     ------------      ')
+    print('All Maze_Generator functions imported properly')

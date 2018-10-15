@@ -60,12 +60,12 @@ Qc = nn.Q_Connections()
 #------------------------------------------------------------------------------
 #  Module 1:    Finding the Fastest Stable Search Speed
 #------------------------------------------------------------------------------
-'''   # triple ' here
+'''  # triple ' here
 #   User Input:   grid size N  | F location | unitary steps S
 
 N = 30
 F = [12,12]
-S = 80
+S = 90
 
 #   Running this code will find the fastest stable hybrid speed
 #   Results are printed to console (< 1 min)
@@ -127,7 +127,7 @@ plt.legend(['Stable Hybrid Speed','Classical Speed'])
 plt.xlabel('unitary steps')
 plt.ylabel('speed')
 
-'''   # triple ' here
+'''  # triple ' here
 
 
 #------------------------------------------------------------------------------
@@ -140,19 +140,19 @@ N = 30
 F = [12,12]
 
 #   Running this code will first find the fastest stable hybrid speed
-#   Then the code calculates the probability accumulated radiialy around F (< 1 min)
+#   Then the code calculates the probability accumulated radialy around F (< 1 min)
 #   A plot is generated 
 
 rmax = nn.Max_Radius(N,F)
-P_r = np.zeros(rmax+1)
+P_r = np.zeros(rmax-5)
 QMAT,S_Stp,Dist,Qm = Fastest_Stable(N,F,Qe,Qc,Qi)
 Pdist = nn.Prob_Dist(QMAT)
-Pr,Sr = nn.Radial_Info(Qm,rmax,F,Pdist,Dist,Qe,Qc)
+Pr,Sr = nn.Radial_Info(Qm,rmax-6,F,Pdist,Dist,Qe,Qc)
 P_r[0] = Pr[0]
 for r in np.arange(1,len(Pr)):
     P_r[r] = Pr[r] - Pr[r-1]
 
-Labels = np.arange(rmax+1)
+Labels = np.arange(rmax-5)
 fig = plt.figure(facecolor='white') 
 plt.title('N='+str(N)+'  |  Radial Probability Around F='+str(F))
 plt.bar(Labels,P_r,align='center',alpha=0.5)
